@@ -1,0 +1,177 @@
+import { assetPath } from '../utils/assetPath.js';
+
+const commonFeatures = ['Precision machined finish', 'Clean bore and edge detailing', 'Produced for custom fitment'];
+const commonApplications = ['Engineering assemblies', 'Industrial machines', 'Replacement components'];
+const commonSpecifications = ['Material: as per requirement', 'Dimensions: as per sample or drawing', 'Finish: machined metal'];
+
+export const products = [
+  {
+    id: 'product-01',
+    name: 'Hex Threaded Nut',
+    category: 'Threaded Component',
+    shortDescription: 'Hexagonal machined nut with internal threading for secure fastening.',
+    description:
+      'A compact hex threaded component made for strong fastening, accurate fitment, and dependable industrial assembly use.',
+    image: assetPath('/images/products/product-01.jpeg'),
+    imagePosition: 'center',
+    features: ['Internal threaded bore', 'Hex profile for tool grip', 'Flat machined faces'],
+    applications: ['Fastening assemblies', 'Machine repair', 'Custom engineering work'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-02',
+    name: 'Twin Bore Link Fitting',
+    category: 'Machined Fitting',
+    shortDescription: 'Dual-bore machined fitting with stepped top profile and side lug.',
+    description:
+      'A precision link-style fitting designed for paired bore alignment and reliable use in compact mechanical assemblies.',
+    image: assetPath('/images/products/product-02.jpeg'),
+    imagePosition: 'center',
+    features: ['Dual bore layout', 'Stepped upper boss', 'Rounded lug body'],
+    applications: ['Link assemblies', 'Hydraulic-style fittings', 'Custom machine parts'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-03',
+    name: 'Sleeve Connector',
+    category: 'Connector Body',
+    shortDescription: 'Cylindrical sleeve connector with open bore and side threaded port.',
+    description:
+      'A sleeve connector body made for clean bore alignment, side fastening, and controlled fitment in mechanical systems.',
+    image: assetPath('/images/products/product-03.jpeg'),
+    imagePosition: 'center',
+    features: ['Open top bore', 'Side threaded port', 'Cylindrical machined body'],
+    applications: commonApplications,
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-04',
+    name: 'External Thread Adapter',
+    category: 'Threaded Adapter',
+    shortDescription: 'Threaded adapter with hex base and hollow machined bore.',
+    description:
+      'A threaded adapter component with a hex base for installation and a clean internal bore for fitting requirements.',
+    image: assetPath('/images/products/product-04.jpeg'),
+    imagePosition: 'center',
+    features: ['External thread profile', 'Hex installation base', 'Hollow machined center'],
+    applications: ['Pipe-style connections', 'Machine ports', 'Industrial fittings'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-05',
+    name: 'Block Port Fitting',
+    category: 'Port Block',
+    shortDescription: 'Rectangular machined block with side bore and front stepped connector.',
+    description:
+      'A block-style fitting built for stable mounting, side passage alignment, and front connector fitment.',
+    image: assetPath('/images/products/product-05.jpeg'),
+    imagePosition: 'center',
+    features: ['Rectangular block body', 'Side bore opening', 'Stepped front connector'],
+    applications: ['Mounted assemblies', 'Fluid or air passage parts', 'Custom machine blocks'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-06',
+    name: 'Offset Lug Connector',
+    category: 'Machined Connector',
+    shortDescription: 'Offset connector with raised bore and secondary mounting hole.',
+    description:
+      'A compact lug connector with an offset profile for alignment-sensitive assemblies and controlled mounting.',
+    image: assetPath('/images/products/product-06.jpeg'),
+    imagePosition: 'center',
+    features: ['Offset machined body', 'Raised central bore', 'Secondary mounting hole'],
+    applications: ['Linkage parts', 'Mounting assemblies', 'Special machine fittings'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-07',
+    name: 'Angled Hex Port Block',
+    category: 'Port Block',
+    shortDescription: 'Angled hex-style block with a top drilled port and polished faces.',
+    description:
+      'A shaped port block made with angled faces, drilled opening, and clean finishing for custom assembly use.',
+    image: assetPath('/images/products/product-07.jpeg'),
+    imagePosition: 'center',
+    features: ['Angled hex body', 'Top drilled port', 'Chamfered machined faces'],
+    applications: ['Port blocks', 'Custom fixtures', 'Mechanical connectors'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-08',
+    name: 'Double Lug Connector',
+    category: 'Machined Fitting',
+    shortDescription: 'Rounded double-lug connector with raised central bore and front hole.',
+    description:
+      'A double-lug machined fitting suited to compact mechanical layouts that need bore alignment and secure fitment.',
+    image: assetPath('/images/products/product-08.jpeg'),
+    imagePosition: 'center',
+    features: ['Rounded double-lug body', 'Raised center bore', 'Front mounting hole'],
+    applications: ['Mechanical linkages', 'Industrial assemblies', 'Custom fittings'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-09',
+    name: 'Saddle Port Block',
+    category: 'Custom Block',
+    shortDescription: 'Small machined block with curved saddle face and drilled port.',
+    description:
+      'A custom block component with a curved machined saddle surface and drilled port for specialized fitment.',
+    image: assetPath('/images/products/product-09.jpeg'),
+    imagePosition: 'center',
+    features: ['Curved saddle face', 'Drilled port opening', 'Compact block profile'],
+    applications: ['Custom fixtures', 'Machine repair', 'Special mounting work'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-10',
+    name: 'Cross Drilled Hex Connector',
+    category: 'Threaded Connector',
+    shortDescription: 'Hex connector with large threaded bore and smaller cross-drilled port.',
+    description:
+      'A cross-drilled connector component made for threaded fitment and secondary port access in compact assemblies.',
+    image: assetPath('/images/products/product-10.jpeg'),
+    imagePosition: 'center',
+    features: ['Large threaded bore', 'Cross-drilled top port', 'Hex machined body'],
+    applications: ['Connector assemblies', 'Machine ports', 'Custom threaded parts'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-11',
+    name: 'Straight Lug Connector',
+    category: 'Machined Connector',
+    shortDescription: 'Straight lug connector with raised bore and front drilled hole.',
+    description:
+      'A straight connector body designed for bore alignment, clean installation, and repeatable industrial fitment.',
+    image: assetPath('/images/products/product-11.jpeg'),
+    imagePosition: 'center',
+    features: ['Raised central bore', 'Front drilled hole', 'Straight rounded body'],
+    applications: commonApplications,
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-12',
+    name: 'Stepped Precision Pin',
+    category: 'Turned Part',
+    shortDescription: 'Turned stepped pin component with top bore and multiple diameter sections.',
+    description:
+      'A turned pin component with stepped profiles and a small top bore for custom machine assembly requirements.',
+    image: assetPath('/images/products/product-12.jpeg'),
+    imagePosition: 'center',
+    features: ['Multiple turned steps', 'Small top bore', 'Smooth cylindrical finish'],
+    applications: ['Machine pins', 'Alignment work', 'Replacement turned parts'],
+    specifications: commonSpecifications,
+  },
+  {
+    id: 'product-13',
+    name: 'Slotted Stepped Pin',
+    category: 'Turned Part',
+    shortDescription: 'Stepped pin component with a slotted top profile and machined shoulders.',
+    description:
+      'A custom stepped pin with a slotted head profile, machined shoulders, and precision turning for assembly use.',
+    image: assetPath('/images/products/product-13.jpeg'),
+    imagePosition: 'center',
+    features: ['Slotted top profile', 'Stepped turned body', 'Machined shoulder faces'],
+    applications: ['Custom pins', 'Mechanical assemblies', 'Replacement components'],
+    specifications: commonSpecifications,
+  },
+];
