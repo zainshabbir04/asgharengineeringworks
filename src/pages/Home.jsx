@@ -107,8 +107,11 @@ export default function Home() {
               ['Material', 'Requirement discussion'],
               ['Machining', 'Custom component support'],
               ['Delivery', 'Clear contact and follow-up'],
-            ].map(([label, value]) => (
-              <div className="border-b border-slate-200 px-5 py-5 sm:border-r sm:last:border-r-0 lg:border-b-0" key={label}>
+            ].map(([label, value], index) => (
+              <div
+                className={`border-slate-200 px-5 py-5 ${index < 3 ? 'border-b' : ''} ${index < 2 ? 'sm:border-b' : 'sm:border-b-0'} ${index % 2 === 0 ? 'sm:border-r' : ''} lg:border-b-0 ${index < 3 ? 'lg:border-r' : 'lg:border-r-0'}`}
+                key={label}
+              >
                 <p className="eyebrow">{label}</p>
                 <p className="mt-2 text-lg font-black text-slate-950">{value}</p>
               </div>
@@ -253,12 +256,18 @@ export default function Home() {
                 finishing, and final inspection.
               </SectionTitle>
               <div className="mt-7 grid gap-3 sm:grid-cols-2">
-                {capabilities.map((capability) => (
-                  <div className="layout-card stat-tile flex items-center gap-3 rounded-lg px-4 py-3" key={capability.title}>
-                    <Wrench size={18} className="text-amber-600" aria-hidden="true" />
-                    <span className="font-bold text-slate-800">{capability.title}</span>
-                  </div>
-                ))}
+                {capabilities.map((capability) => {
+                  const Icon = capability.icon;
+                  return (
+                    <div className="layout-card stat-tile rounded-lg p-4" key={capability.title}>
+                      <div className="flex items-center gap-3">
+                        <Icon size={20} className="shrink-0 text-amber-600" aria-hidden="true" />
+                        <span className="font-bold text-slate-900">{capability.title}</span>
+                      </div>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">{capability.copy}</p>
+                    </div>
+                  );
+                })}
               </div>
             </div>
           </ScrollReveal>

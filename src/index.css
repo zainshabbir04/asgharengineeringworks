@@ -482,10 +482,13 @@ a {
   color: var(--brand) !important;
 }
 
-.text-amber-600,
+.text-amber-600 {
+  color: var(--amber) !important;
+}
+
 .text-amber-300,
 .text-amber-200 {
-  color: var(--amber) !important;
+  color: #f0c46a !important;
 }
 
 .bg-teal-600 {

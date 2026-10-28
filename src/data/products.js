@@ -1,6 +1,5 @@
 import { assetPath } from '../utils/assetPath.js';
 
-const commonFeatures = ['Precision machined finish', 'Clean bore and edge detailing', 'Produced for custom fitment'];
 const commonApplications = ['Engineering assemblies', 'Industrial machines', 'Replacement components'];
 const commonSpecifications = ['Material: as per requirement', 'Dimensions: as per sample or drawing', 'Finish: machined metal'];
 

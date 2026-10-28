@@ -13,11 +13,11 @@ import Contact from './pages/Contact.jsx';
 import NotFound from './pages/NotFound.jsx';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [pathname]);
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [pathname, search]);
 
   return null;
 }

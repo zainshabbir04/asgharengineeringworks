@@ -36,23 +36,32 @@ export default function Footer() {
           <div>
             <h2 className="text-sm font-extrabold uppercase text-slate-300">Contact</h2>
             <div className="mt-4 space-y-3 text-sm text-slate-300">
-              <a className="flex items-center gap-3 hover:text-white" href={`tel:${company.phones[0].replaceAll('-', '')}`}>
-                <Phone size={17} aria-hidden="true" />
-                {company.phones.join(', ')}
-              </a>
+              <div className="flex items-center gap-3">
+                <Phone size={17} aria-hidden="true" className="shrink-0" />
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                  {company.phones.map((phone, index) => (
+                    <span key={phone}>
+                      <a className="hover:text-white" href={`tel:${phone.replaceAll('-', '')}`}>
+                        {phone}
+                      </a>
+                      {index < company.phones.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </div>
+              </div>
               <a className="flex items-center gap-3 hover:text-white" href={`mailto:${company.email}`}>
-                <Mail size={17} aria-hidden="true" />
+                <Mail size={17} aria-hidden="true" className="shrink-0" />
                 {company.email}
               </a>
               <p className="flex items-center gap-3">
-                <MapPin size={17} aria-hidden="true" />
+                <MapPin size={17} aria-hidden="true" className="shrink-0" />
                 Pakistan
               </p>
             </div>
           </div>
         </div>
         <div className="mt-10 border-t border-white/10 pt-6 text-sm text-slate-500">
-          (c) {new Date().getFullYear()} {company.name}. All rights reserved.
+          © {new Date().getFullYear()} {company.name}. All rights reserved.
         </div>
       </div>
     </footer>

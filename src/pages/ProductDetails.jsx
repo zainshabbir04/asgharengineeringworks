@@ -113,7 +113,10 @@ export default function ProductDetails() {
                   <Wrench size={18} aria-hidden="true" />
                   Built for repeatable fitment from customer drawing, sample, or custom requirement.
                 </div>
-                <Link className="btn-primary" to="/contact">
+                <Link
+                  className="btn-primary"
+                  to={`/contact?product=${encodeURIComponent(`${productCode} - ${product.name}`)}`}
+                >
                   Start Quote
                   <ArrowRight size={18} aria-hidden="true" />
                 </Link>

@@ -1,11 +1,29 @@
 import { ArrowRight, Menu, Phone, X } from 'lucide-react';
-import { useState } from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { company, navItems } from '../data/company.js';
 import CompanyLogo from './CompanyLogo.jsx';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { pathname, search } = useLocation();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname, search]);
+
+  useEffect(() => {
+    if (!isOpen) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
 
   const linkClass = ({ isActive }) =>
     [
@@ -37,7 +55,7 @@ export default function Navbar() {
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
             {navItems.map((item) => (
-              <NavLink className={linkClass} key={item.path} to={item.path}>
+              <NavLink className={linkClass} end={item.path === '/'} key={item.path} to={item.path}>
                 {item.label}
               </NavLink>
             ))}
@@ -69,7 +87,7 @@ export default function Navbar() {
           <div className="mobile-menu-panel py-4 lg:hidden">
             <nav className="grid gap-2" aria-label="Mobile navigation">
               {navItems.map((item) => (
-                <NavLink className={linkClass} key={item.path} to={item.path} onClick={() => setIsOpen(false)}>
+                <NavLink className={linkClass} end={item.path === '/'} key={item.path} to={item.path} onClick={() => setIsOpen(false)}>
                   {item.label}
                 </NavLink>
               ))}

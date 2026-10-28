@@ -40,6 +40,12 @@ export default function ProductCard({ product, delay = 0 }) {
       return undefined;
     }
 
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setIsVisible(true);
+      return undefined;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
